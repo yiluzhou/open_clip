@@ -95,6 +95,10 @@ if __name__ == '__main__':
     python generate_roco_csv.py --dataset_dir "/mnt/e/Temp_data/Whale_Dolphin_Identification/Square/train" --input_text_name "captions.txt" --out_dir "../Whale_Dolphin_Identification/" --out_csv_file "train.csv"
     python generate_roco_csv.py --dataset_dir "/mnt/e/Temp_data/Whale_Dolphin_Identification/Square/val/" --input_text_name "captions.txt" --out_dir "../Whale_Dolphin_Identification/" --out_csv_file "val.csv"
     python generate_roco_csv.py --dataset_dir "/mnt/e/Temp_data/Whale_Dolphin_Identification/Square/test" --input_text_name "captions.txt" --out_dir "../Whale_Dolphin_Identification/" --out_csv_file "test.csv"
+
+    python generate_roco_csv.py --dataset_dir "/mnt/e/Temp_data/Body_Parts_XRay/Original/train" --input_text_name "captions.txt" --out_dir "../Body_Parts_XRay/" --out_csv_file "train.csv"
+    python generate_roco_csv.py --dataset_dir "/mnt/e/Temp_data/Body_Parts_XRay/Original/val/" --input_text_name "captions.txt" --out_dir "../Body_Parts_XRay/" --out_csv_file "val.csv"
+    python generate_roco_csv.py --dataset_dir "/mnt/e/Temp_data/Body_Parts_XRay/Original/test" --input_text_name "captions.txt" --out_dir "../Body_Parts_XRay/" --out_csv_file "test.csv"
     """
     
     parser = argparse.ArgumentParser()
