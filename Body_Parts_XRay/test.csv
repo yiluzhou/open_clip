@@ -1,0 +1,175 @@
+filepath	caption
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10107388868056003719871837223999138217-c.png	abdomen
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10121269997000927609159070327294073193-c.png	sinus
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10189313814635816234380943860311008812-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10534788023918017466995376592879689223-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10606529710873585120949488696315239902-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10873140185372483384104313397133134339-c.png	lumbar spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10921163894995839905985376916380372297-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10928746813638613818136841615770309706-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.10953659733779305747615100443584474163-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11038050276898630416020640091514059562-c.png	lumbar spine, thoracic spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11087590130890846408615762364461798921-c.png	shoulder
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11121185482084353409350327062409243101-c.png	ankle
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11154819012720659139394406394594718465-c.png	hand
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11201642636963938779517547344500372149-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11325907253020198448565973748398061163-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11486153376159849706171862301634120207-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11504724594984965602352794642021327380-c.png	elbow
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11510235397020429669251783844827262618-c.png	cervical spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11525438084542282558810567614348583958-c.png	ankle
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11707990348620169509145053463963374569-c.png	cervical spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11750663969746891830139495508823267889-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11769091169202361191232573875109527532-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11803587057874004257305828672968120161-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11817642888910554738757114916300476459-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.11906946738973895351244396247695564997-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12017020395538418796791667973665779019-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12038572537031811246404832851090645778-c.png	lower leg
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12201269493158411943987898676828698534-c.png	lower leg
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12256595846154237358757762019099901677-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12298592996390979310806885517395823053-c.png	shoulder
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12401076608067423677279984756638353389-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12417033569210113590539659626928492880-c.png	abdomen, chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12457775548016606901247521468491855858-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12494489757305120214535910398767230127-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12519421941347857414117635998246747858-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12529523974665777310068038344135596371-c.png	elbow
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12531147140263297225126104319831442489-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12541887772880068753280376721646048004-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12562144313766814317417446207952346829-c.png	lumbar spine, thoracic spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12742169316804383951377645521252873815-c.png	elbow
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12835454942925425630498406207743168307-c.png	elbow
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12866370363362455047253382258366617014-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.12890381296975892829022621008724647385-c.png	shoulder
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.13032367994874438756820688042868936237-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.13066708512134387718179717660802975137-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.13070896846370726422343092960399298584-c.png	wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.13597082823167773434535691655911895726-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.13948420660761550741243919482489110075-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.14477586337410179309381694095880819502-c.png	wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.14765633785769314053681356981929937753-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.15092989485256748181328412427295059067-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.15126022716559326221899996790039127181-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.15590548900176442928310981574028424628-c.png	ankle
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.15757083169860526899067108643805557170-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.17096032536507363761868352941603795054-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.17164887072086624486462660570907584007-c.png	elbow, forearm
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.17859420911016848318072554173349773541-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.18365828654707382793733081378442684211-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.19275347305922058242303659159483967248-c.png	finger
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.19994258413281657197149209675623439488-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.20918140292920524949530657853884334862-c.png	hip
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.20995158262911622804072211155913817627-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.21199751632414178657230526938620391906-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.22644062609859232323281488761606263873-c.png	cervical spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.23604007291723287998561293165905396165-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.24103468064058116720469659060890579284-c.png	ankle
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.26828426317323088605044010826705665054-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.27676630945884704976064855931251186098-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.28920972508080242247036080466695673128-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.29385796471072727052031188982311885338-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.30665311865627600105937006561553968755-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.31810093671028409725531983437853041806-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.31902345978556946684317428904281670633-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.33342063943341882283065758918110259646-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.33344784114194203014253567431793927863-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.34134311832845729731684923720547788048-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.34881782731245659697975021007267105022-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.34985666539063208992123584855994988565-c.png	knee
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.35475677392710937045536458149721949725-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.36395686503364660068630268121826615498-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.36507723893912911343571828187290935916-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.36629006271789573314556482581195179941-c.png	lower leg
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.37634180084111795685928688942145555908-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.39306381561261326456073690726162489181-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.40192029357433558639867635827273646379-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.42474940752612960219149772204218910503-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.43678873342118569081551708730087158471-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.44365548740102116811955513588335809108-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.44404516252019386634537602443188468056-c.png	lumbar spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.44700725962534629309385366046436799158-c.png	shoulder
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.44769667050882688681268288464245560275-c.png	abdomen
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.45730841833224715665029305013707917693-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.46269735129675043874390862852991144647-c.png	lumbar spine, thoracic spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.47263066939228292739632936135971962509-c.png	knee
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.47654016360516607749663008358914554847-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.47668595786886202849767872236921330183-c.png	sinus
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.48164415317122213996989219517497630015-c.png	hand, wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.48911596960525386020401831637335226786-c.png	skull
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.49350438390636504117359338405625417035-c.png	elbow
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.50055066722360061644881071375145080036-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.50867969730838857515823423861363667254-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.51262104576214638840476735243748863059-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.52175178366301045572717039143013042035-c.png	knee
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.52565113678257590570009002240635738158-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.52612570085260330843150837350547758700-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.53513532061431932072379139580809187293-c.png	knee
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.54739309527041386057440159936307938132-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.55225508737589277240526800312916397149-c.png	lumbar spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.55532921181975222749591710692124007152-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.55616500754849922682166624237404044949-c.png	wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.58651292573184517629629882921490862222-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.59513984062726763251696855090310552587-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.60110883608536168431306185709137488124-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.60795506542529482497878924785993649547-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.61162858382867330371436325748544394090-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.62074425726884602856697512942174430407-c.png	cervical spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.62345270303014709498756226727287916460-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.64155948815204971385934477338567331312-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.65367782739053484696600623678658844526-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.66059356165184284726488919105781982036-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.66090421685182342980503431575556713055-c.png	lumbar spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.66883590224936634028808629191284476297-c.png	wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.66994000214538284994831173405710593410-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.67231795829856555955789394715934480341-c.png	knee
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.67498246555904727222770760880185608565-c.png	shoulder
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.68406114115504976098308455781382728172-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.68861569387737677541724515518885079919-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.69138151863777650798675049709312263309-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.69691671218048633208860810485131266610-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.70697631823307562288654666875663936838-c.png	abdomen
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.71395499531983875426566111641999107780-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.71782455619707465800640476833895211640-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.71937465866376461646410699392390775049-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.72250685815685938513028073868055278263-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.72312911034063986883465660577354642887-c.png	cervical spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.74264808869550342454605843666587636719-c.png	knee
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.74830143260178495808733337859705527858-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.75371875098288485781683142614443689050-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.76482195481290376937939274201235029927-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.77394718572820298319113935685771312236-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.77459676748714405167307910100402272658-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.77573871064210277516224254232445572815-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.78508168266081517346412464197157710842-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.78804044807863278765750137499383142788-c.png	hand, wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.80836784371973992636168451874360344165-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.80861927945702755310503012557458964443-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.80917359866047394561090484544838212925-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.81667270286163082233296592122323565532-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.82747852086062076149184445334113719767-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.82841428083494441412059995445700823350-c.png	wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.83737120855042966743987844472601961600-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.83830205205082076619545517457402464047-c.png	wrist
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.84791765678612446017805462067606438053-c.png	abdomen
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.84990919551164926573680462087019639123-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.85689450637123581874675526651470076567-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.86545232502450525182256443992353070791-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.88201401328037140717800775648491689417-c.png	hip
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.88978469234834814481225549162103897780-c.png	pelvis
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.89317032683934050993384638790227083288-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.89836102392358230941005086332549732866-c.png	hand
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.90188614108641468056830101349132081242-c.png	abdomen
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.90541772220753626270910975333798686634-c.png	feet
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.90617059056548212763113895515703343197-c.png	shoulder
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.91042273384584167404374838704195087474-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.91324006631760979489400607389405102790-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.91674382289874592333560870730544415194-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.91805802511011409719673077778789731830-c.png	sinus
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.91838574247426885629910086230544014035-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.94897438067708313768183139424294180974-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.95629124305226382341525698916190596780-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.96854131242626816989040611160851671266-c.png	others
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.97452786237308290477569555339009940148-c.png	chest
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.99189527285383550409905014316363564631-c.png	lumbar spine, thoracic spine
+/mnt/g/Datasets/Body_Parts_XRay/Original/test/images/1.2.826.0.1.3680043.8.498.99979421603039894766639159445609592178-c.png	cervical spine
