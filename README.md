@@ -419,6 +419,31 @@ nohup python -m training.main_test \
     --gather-with-grad \
     > "/mnt/eds_share/Users/yilu.zhou/Development/log/open_clip/coca_ViT-L_14_1.txt" 2>&1 &
 ```
+```bash
+nohup python -m training.main_test \
+    --train-data "./Body_Parts_XRay/train_square.csv" \
+    --val-data "./Body_Parts_XRay/val_square.csv" \
+    --csv-img-key filepath \
+    --csv-caption-key caption \
+    --warmup 1000 \
+    --logs "/mnt/g/Logtemp/open_clip/Body_Parts_XRay" \
+    --batch-size 32 \
+    --aug-cfg "augment_dir='/home/yilu/Development/open_clip/Body_Parts_XRay/'" \
+    --lr 1e-6 \
+    --wd 0.1 \
+    --epochs 100 \
+    --workers 4 \
+    --model "coca_ViT-L-14" \
+    --save-frequency 2 \
+    --pretrained "mscoco_finetuned_laion2B-s13B-b90k" \
+    --report-to "tensorboard" \
+    --log-every-n-steps 200 \
+    --grad-checkpointing \
+    --local-loss \
+    --gather-with-grad \
+    --accum-freq 4 \
+    > "/mnt/g/Logtemp/open_clip/Body_Parts_XRay/coca_ViT-L_14_aug.txt" 2>&1 &
+```
 This is a general setting, open_clip has very parameters that can be set, ```python -m training.main --help``` should show them. The only relevant change compared to pre-training are the two arguments
 
 ```bash
