@@ -72,3 +72,5 @@ def customized_augmentation(image_size):
 
     # https://www.kaggle.com/code/raddar/popular-x-ray-image-normalization-techniques
     # https://towardsdatascience.com/deep-learning-in-healthcare-x-ray-imaging-part-5-data-augmentation-and-image-normalization-1ead1c02cfe3
+
+    return train_transform

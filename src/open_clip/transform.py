@@ -103,7 +103,7 @@ def image_transform(
                 re_mode='pixel',
                 **aug_cfg_dict,
             )
-        elif augment_dir is None:
+        elif augment_dir is not None:
             if not os.path.exists(os.path.join(augment_dir, 'image_augmentation.py')):
                 raise ValueError(f'In folder augment_dir ({augment_dir}), there must contain image_augmentation.py')
             sys.path.append(augment_dir)

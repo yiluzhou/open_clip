@@ -33,7 +33,7 @@ nohup python -m training.main_test \
     --aug-cfg "augment_dir='/home/yilu/Development/open_clip/Body_Parts_XRay/'" \
     --lr 1e-6 \
     --wd 0.1 \
-    --epochs 100 \
+    --epochs 200 \
     --workers 4 \
     --model "coca_ViT-L-14" \
     --save-frequency 2 \
