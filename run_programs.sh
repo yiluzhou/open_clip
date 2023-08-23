@@ -23,5 +23,7 @@ nohup python -m training.main_test \
     --gather-with-grad \
     --accum-freq 4 \
     > "/mnt/g/Logtemp/open_clip/Body_Parts_XRay/coca_ViT-L_14_clahe.log" 2>&1
-
 nohup python ./Body_Parts_XRay/test_Body_Parts_XRay.py > test_Body_Parts_XRay.log 2>&1
+git add .
+git commit -m "update"
+git push origin main
