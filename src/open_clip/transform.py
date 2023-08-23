@@ -5,9 +5,12 @@ from typing import Any, Dict, Optional, Sequence, Tuple, Union
 import torch, sys, os
 import torch.nn as nn
 import torchvision.transforms.functional as F
+from PIL import Image
+import numpy as np
 
 from torchvision.transforms import Normalize, Compose, RandomResizedCrop, InterpolationMode, ToTensor, Resize, \
     CenterCrop
+import albumentations as A
 
 from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
 
@@ -50,6 +53,20 @@ class ResizeMaxSize(nn.Module):
         return img
 
 
+class AlbumentationsTransform2:
+    def __init__(self, transform=None):
+        self.transform = transform
+
+    def __call__(self, img):
+        img = np.array(img)  # Convert to numpy array
+        img = self.transform(image=img)['image']
+        return Image.fromarray(img)  # Convert back to PIL image
+
+# Define the CLAHE transformation
+clahe = A.CLAHE(p=1.0, clip_limit=4.0, tile_grid_size=(8, 8))
+CLAHE = AlbumentationsTransform2(clahe) # normalizing using Adaptive Histogram Equalization (CLAHE)
+
+
 def _convert_to_rgb(image):
     return image.convert('RGB')
 
@@ -62,6 +79,7 @@ def image_transform(
         resize_longest_max: bool = False,
         fill_color: int = 0,
         aug_cfg: Optional[Union[Dict[str, Any], AugmentationCfg]] = None,
+        augment_dir: Optional[str] = None,
 ):
     mean = mean or OPENAI_DATASET_MEAN
     if not isinstance(mean, (list, tuple)):
@@ -123,7 +141,7 @@ def image_transform(
             if aug_cfg_dict:
                 warnings.warn(f'Unused augmentation cfg items, specify `use_timm` to use ({list(aug_cfg_dict.keys())}).')
         return train_transform
-    else:
+    else: # not training case
         if resize_longest_max:
             transforms = [
                 ResizeMaxSize(image_size, fill=fill_color)
@@ -133,9 +151,10 @@ def image_transform(
                 Resize(image_size, interpolation=InterpolationMode.BICUBIC),
                 CenterCrop(image_size),
             ]
+
         transforms.extend([
             _convert_to_rgb,
+            CLAHE,
             ToTensor(),
-            normalize,
         ])
         return Compose(transforms)
