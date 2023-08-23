@@ -97,13 +97,19 @@ def customized_augmentation(image_size):
     ])
     
     # torchvision transforms
-    pre_transforms = Compose([    
+    pre_rotation = Compose([
         RandomRotation(degrees=15),
+    ])
+
+    pre_resize = Compose([
         RandomResizedCrop(
             image_size,
             scale=(0.9, 1.1),
             interpolation=InterpolationMode.BICUBIC,
         ),
+    ])
+
+    pre_transforms = Compose([
         RandomHorizontalFlip(p=0.5),
         ColorJitter(brightness=0.15, contrast=0.15),
         RandomAffine(degrees=0, translate=(0.1, 0.1)),
@@ -121,7 +127,9 @@ def customized_augmentation(image_size):
     ])
 
     train_transform = Compose([
-        CLAHE, # normalizing using Adaptive Histogram Equalization (CLAHE)
+        AlbumentationsTransform2(clahe),
+        RandomAugmentation(0.3, pre_rotation),
+        pre_resize, # all images will have be resized here
         # 0.3 means 30% of images will be augmented
         RandomAugmentation(0.3, pre_transforms, AlbumentationsTransform(albu_transforms)),
         post_transforms
