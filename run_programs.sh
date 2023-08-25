@@ -1,20 +1,20 @@
 #!/bin/bash
 
 nohup python -m training.main_test \
-    --train-data "./Body_Parts_XRay/train_square.csv" \
-    --val-data "./Body_Parts_XRay/val_square.csv" \
+    --train-data "./Knee_OA/train.csv" \
+    --val-data "./Knee_OA/val.csv" \
     --csv-img-key filepath \
     --csv-caption-key caption \
     --warmup 1000 \
-    --logs "/mnt/g/Logtemp/open_clip/Body_Parts_XRay" \
+    --logs "/mnt/g/Logtemp/open_clip/Knee_OA" \
     --batch-size 32 \
-    --aug-cfg "augment_dir='/home/yilu/Development/open_clip/Body_Parts_XRay/'" \
+    --aug-cfg "augment_dir='/home/yilu/Development/open_clip/Knee_OA/'" \
     --lr 2e-6 \
     --wd 0.1 \
-    --epochs 300 \
+    --epochs 400 \
     --workers 4 \
     --model "coca_ViT-L-14" \
-    --save-frequency 3 \
+    --save-frequency 4 \
     --pretrained "mscoco_finetuned_laion2b_s13b_b90k" \
     --report-to "tensorboard" \
     --log-every-n-steps 200 \
@@ -22,8 +22,5 @@ nohup python -m training.main_test \
     --local-loss \
     --gather-with-grad \
     --accum-freq 4 \
-    > "/mnt/g/Logtemp/open_clip/Body_Parts_XRay/coca_ViT-L_14_clahe.log" 2>&1
-nohup python ./Body_Parts_XRay/test_Body_Parts_XRay.py > test_Body_Parts_XRay.log 2>&1
-git add .
-git commit -m "update"
-git push origin main
+    > "/mnt/g/Logtemp/open_clip/Knee_OA/coca_ViT-L_14_1.log" 2>&1
+nohup python ./Knee_OA/test_Knee_OA.py > ./Knee_OA/test_Knee_OA.log 2>&1

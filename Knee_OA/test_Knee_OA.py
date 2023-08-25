@@ -21,20 +21,24 @@ class AlbumentationsTransform2:
 clahe = A.CLAHE(p=1.0, clip_limit=6.0, tile_grid_size=(12, 12))
 CLAHE = AlbumentationsTransform2(clahe) # normalizing using Adaptive Histogram Equalization (CLAHE)
 
+caption_map = {
+    "healthy": "healthy normal",
+    "doubtful": "doubtful osteoarthritis",
+    "minimal": "minimal osteoarthritis",
+    "moderate": "moderate osteoarthritis",
+    "severe": "severe osteoarthritis"
+}
 
-def extract_classification(file_path):
-    classification = []
-    df_classification = pd.read_csv(file_path)
-    classification = df_classification['tissue_types'].tolist()
-    classification = list(set(classification))
-    return classification, df_classification
+classification = list(caption_map.values())
 
-classification_csv_file = '/mnt/g/Datasets/Body_Parts_XRay/train_df_new1.csv'
-classification, df_classification = extract_classification(classification_csv_file)
-
+def get_ground_truth(filename, caption_map):
+    for keyword, ground_truth in caption_map.items():
+        if keyword in filename:
+            return ground_truth
+    return None
 
 def process_single_epoch(pretrained_model, sentences):
-    img_dir = '/mnt/g/Datasets/Body_Parts_XRay/Square/test/images/'
+    img_dir = '/mnt/g/Datasets/Knee_OA/Original/test/images/'
     model, _, preprocess = open_clip.create_model_and_transforms(
         model_name="coca_ViT-L-14",
         pretrained=pretrained_model,
@@ -53,7 +57,7 @@ def process_single_epoch(pretrained_model, sentences):
     def read_single_image(img_dir, img_filename, sentences, text_features):
         #get the ground truth value
         image_path = os.path.join(img_dir, img_filename)
-        ground_truth = df_classification[df_classification['filename']==img_filename]['tissue_types'].iloc[0]
+        ground_truth = get_ground_truth(img_filename, caption_map)
         
         # load a sample image
         image = preprocess(Image.open(image_path).convert('RGB')).unsqueeze(0)
@@ -85,7 +89,7 @@ def process_single_epoch(pretrained_model, sentences):
         df_all = pd.concat([df_all, df]).reset_index(drop=True)
 
     #save df_all to csv
-    csv_file = f"/home/yilu/Development/open_clip/Body_Parts_XRay/temp1/epoch_{epoch_number}.csv"
+    csv_file = f"/home/yilu/Development/open_clip/Knee_OA/temp/epoch_{epoch_number}.csv"
     df_all.to_csv(csv_file, index=False)
 
     total_rows = len(df_all)
@@ -127,8 +131,8 @@ def save_to_csv(df, csv_file):
 
 def main():
     #obtain the latest pretrained model folder
-    pt_folder_root = '/mnt/g/Logtemp/open_clip/Body_Parts_XRay/'
-    dir_1 = [a for a in os.listdir(pt_folder_root) if a.startswith('2023_08_23-23')][0]
+    pt_folder_root = '/mnt/g/Logtemp/open_clip/Knee_OA/'
+    dir_1 = [a for a in os.listdir(pt_folder_root) if a.startswith('2023_08_24-23')][0]
     pt_folder_path = os.path.join(pt_folder_root, dir_1, 'checkpoints')
 
     pt_files = [os.path.join(pt_folder_path, filename) for filename in os.listdir(pt_folder_path) if filename.endswith('.pt')]
@@ -136,7 +140,7 @@ def main():
     pt_files = [pt_file for pt_file in pt_files if extract_epoch_num(pt_file) >= 0]
     # Sort the list
     sorted_pt_files = sorted(pt_files, key=extract_epoch_num)
-    csv_file = "/home/yilu/Development/open_clip/Body_Parts_XRay/temp1/benchmark_all_epochs_augment.csv"
+    csv_file = "/home/yilu/Development/open_clip/Knee_OA/temp/benchmark_all_epochs.csv"
     for pretrained_model in sorted_pt_files:
         process_single_pretrained_model(pretrained_model, csv_file)
 
