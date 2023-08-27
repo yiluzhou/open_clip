@@ -145,7 +145,7 @@ def invert_background(img):
 def customized_augmentation(image_size, color_image=False, training_purpose=True):
     """
     Customize the augmentation pipeline as per your choice.    
-    training_purpose: True for training, False only for visualization purpose.
+    training_purpose: True for training, False for visualization.
     """
     def resize(img):
         if isinstance(image_size, int):
@@ -260,17 +260,17 @@ def customized_augmentation(image_size, color_image=False, training_purpose=True
         ToTensor(),
         *([mean_std(color_image)] if training_purpose else []),                     # normalizing using mean + standard deviation
         # Lambda(percentile_scaling),    # normalizing using percentile scaling
-        RandomErasing(p=0.15, scale=(0.02, 0.1), ratio=(0.3, 3.3), value=0, inplace=False),  # Cutout or Random Erasing
+        # RandomErasing(p=0.15, scale=(0.01, 0.1), ratio=(0.3, 3.3), value=0, inplace=False),  # Cutout or Random Erasing
     ])
 
     train_transform = Compose([
         CLAHE(color_image),
         # RandomAugmentation(0.1, Lambda(invert_background)), #10% images: background color will be inverted
-        RandomAugmentation(0.2, pre_rotation), # 20% images: RandomRotation
+        # RandomAugmentation(0.2, pre_rotation), # 20% images: RandomRotation
         pre_resize, # all images do resize
-        RandomAugmentation(0.2, customize_RandomResizedCrop), # 20% images will have be resized here
-        # 0.2 means 20% of images will be augmented
-        RandomAugmentation(0.2, pre_transforms, AlbumentationsTransform(albu_transforms)),
+        # RandomAugmentation(0.2, customize_RandomResizedCrop), # 20% images will have be resized here
+        # 0.3 means 30% of images will be augmented
+        # RandomAugmentation(0.2, pre_transforms, AlbumentationsTransform(albu_transforms)),
         post_transforms
     ])
 
