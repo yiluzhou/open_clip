@@ -22,7 +22,7 @@ nohup python -m training.main_test \
     --local-loss \
     --gather-with-grad \
     --accum-freq 4 \
-    > "/mnt/g/Logtemp/open_clip/Knee_OA/coca_ViT-L_14_normalization.log" 2>&1 &
+    > "/mnt/g/Logtemp/open_clip/Knee_OA/coca_ViT-L_14_normalization_noresize.log" 2>&1 &
 
 
     --aug-cfg "augment_dir='/home/yilu/Development/open_clip/Knee_OA/'" \

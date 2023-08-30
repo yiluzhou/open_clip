@@ -239,7 +239,7 @@ def customized_augmentation(image_size, color_image=False, training_purpose=True
     
     # torchvision transforms
     pre_rotation = Compose([
-        RandomRotation(degrees=15),
+        RandomRotation(degrees=10),
     ])
 
     pre_resize = Compose([
@@ -268,9 +268,9 @@ def customized_augmentation(image_size, color_image=False, training_purpose=True
         # RandomAugmentation(0.1, Lambda(invert_background)), #10% images: background color will be inverted
         RandomAugmentation(0.2, pre_rotation), # 20% images: RandomRotation
         pre_resize, # all images do resize
-        RandomAugmentation(0.2, customize_RandomResizedCrop), # 20% images will have be resized here
+        # RandomAugmentation(0.2, customize_RandomResizedCrop), # 20% images will have be resized here
         # 0.2 means 20% of images will be augmented
-        RandomAugmentation(0.2, pre_transforms, AlbumentationsTransform(albu_transforms)),
+        RandomAugmentation(0.2, pre_transforms), #, AlbumentationsTransform(albu_transforms)
         post_transforms
     ])
 
