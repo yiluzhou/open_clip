@@ -19,7 +19,12 @@ nohup python -m training.main_test \
     --local-loss \
     --gather-with-grad \
     --accum-freq 4 \
+    --color-image \
     > "/mnt/g/Logtemp/open_clip/Whale_Dolphin_Identification/coca_ViT-L_14_1.txt" 2>&1 &
+
+
+
+
 
 
 nohup python -m training.main_test \

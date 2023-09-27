@@ -230,6 +230,7 @@ def main(args):
         image_std=args.image_std,
         aug_cfg=args.aug_cfg,
         output_dict=True,
+        color_image=args.color_image,
     )
     if args.distill:
         # FIXME: currenlty assumes the model your distilling from has the same tokenizer & transforms.
@@ -239,6 +240,7 @@ def main(args):
             device=device,
             precision=args.precision,
             output_dict=True,
+            color_image=args.color_image,
         )
     if args.use_bnb_linear is not None:
         print('=> using a layer from bitsandbytes.\n'

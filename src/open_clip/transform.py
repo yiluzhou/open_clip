@@ -2,7 +2,7 @@ import warnings
 from dataclasses import dataclass, asdict
 from typing import Any, Dict, Optional, Sequence, Tuple, Union
 
-import torch, sys, os
+import torch, sys, os, cv2
 import torch.nn as nn
 import torchvision.transforms.functional as F
 from PIL import Image
@@ -12,7 +12,7 @@ from torchvision.transforms import Normalize, Compose, RandomResizedCrop, Interp
     CenterCrop
 import albumentations as A
 
-from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
+from .constants import OPENAI_COLOR_DATASET_MEAN, OPENAI_COLOR_DATASET_STD, GRAYSCALE_DATASET_MEAN, GRAYSCALE_DATASET_STD
 
 
 @dataclass
@@ -25,7 +25,6 @@ class AugmentationCfg:
     re_count: Optional[int] = None
     use_timm: bool = False
     augment_dir: Optional[str] = None
-    color_image: bool = False
 
 
 class ResizeMaxSize(nn.Module):
@@ -63,9 +62,46 @@ class AlbumentationsTransform2:
         img = self.transform(image=img)['image']
         return Image.fromarray(img)  # Convert back to PIL image
 
-# Define the CLAHE transformation
-clahe = A.CLAHE(p=1.0, clip_limit=6.0, tile_grid_size=(12, 12))
-CLAHE = AlbumentationsTransform2(clahe) # normalizing using Adaptive Histogram Equalization (CLAHE)
+
+class CLAHETransform: #helper class for CLAHE
+    def __init__(self, transform=None):
+        self.transform = transform
+
+    def _apply_clahe_to_color_image(self, image):
+        # Convert the image to LAB color space
+        lab = cv2.cvtColor(image, cv2.COLOR_RGB2LAB)
+
+        # Split the LAB image into L, A and B channels
+        l_channel, a_channel, b_channel = cv2.split(lab)
+
+        # Apply CLAHE to L channel
+        clahe = cv2.createCLAHE(clipLimit=6.0, tileGridSize=(12, 12))
+        cl = clahe.apply(l_channel)
+        
+        # Merge the CLAHE enhanced L channel with the original A and B channels
+        merged_channels = cv2.merge([cl, a_channel, b_channel])
+
+        # Convert the LAB image back to RGB
+        return cv2.cvtColor(merged_channels, cv2.COLOR_LAB2RGB)
+
+    def __call__(self, img):
+        if self.transform: # grayscale image
+            img = np.array(img)  # Convert to numpy array
+            img = self.transform(image=img)['image']
+        else:
+            # color image
+            img = np.array(img)
+            img = self._apply_clahe_to_color_image(img)
+        return Image.fromarray(img)  # Convert back to PIL image
+
+
+def CLAHE(color_image=False):
+    if color_image:
+        return CLAHETransform()
+    else:
+        # Define the CLAHE transformation for grayscale images
+        clahe = A.CLAHE(p=1.0, clip_limit=6.0, tile_grid_size=(12, 12))
+        return CLAHETransform(clahe) # normalizing using Adaptive Histogram Equalization (CLAHE)
 
 
 def _convert_to_rgb(image):
@@ -83,11 +119,15 @@ def image_transform(
         aug_cfg: Optional[Union[Dict[str, Any], AugmentationCfg]] = None,
         augment_dir: Optional[str] = None,
 ):
-    mean = mean or OPENAI_DATASET_MEAN
+    if color_image:
+        mean = mean or OPENAI_COLOR_DATASET_MEAN
+        std = std or OPENAI_COLOR_DATASET_STD
+    else:
+        mean = mean or GRAYSCALE_DATASET_MEAN
+        std = std or GRAYSCALE_DATASET_STD
+
     if not isinstance(mean, (list, tuple)):
         mean = (mean,) * 3
-
-    std = std or OPENAI_DATASET_STD
     if not isinstance(std, (list, tuple)):
         std = (std,) * 3
 
@@ -100,11 +140,11 @@ def image_transform(
     else:
         aug_cfg = aug_cfg or AugmentationCfg()
     normalize = Normalize(mean=mean, std=std)
+    print(f"TODO: color_image = {color_image}")
     if is_train:
         aug_cfg_dict = {k: v for k, v in asdict(aug_cfg).items() if v is not None}
         use_timm = aug_cfg_dict.pop('use_timm', False)
         augment_dir = aug_cfg_dict.pop('augment_dir', None)
-        color_image = aug_cfg_dict.pop('color_image', False)
         if use_timm:
             from timm.data import create_transform  # timm can still be optional
             if isinstance(image_size, (tuple, list)):
@@ -157,7 +197,7 @@ def image_transform(
 
         transforms.extend([
             _convert_to_rgb,
-            CLAHE,
+            CLAHE(color_image),
             ToTensor(),
             normalize,
         ])

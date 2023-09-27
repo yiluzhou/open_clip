@@ -72,6 +72,12 @@ def parse_args(args):
         help="Whether to use sampling with replacement for webdataset shard selection."
     )
     parser.add_argument(
+        "--color-image",
+        default=False,
+        action="store_true",
+        help="Use this flag to indicate whether they are color or grayscale images: False if grayscale images."
+    )
+    parser.add_argument(
         "--csv-separator",
         type=str,
         default="\t",
@@ -151,12 +157,6 @@ def parse_args(args):
         default=False,
         help="Use this flag to skip the learning rate decay.",
     )
-    # parser.add_argument(
-    #     "--color-image",
-    #     default=False,
-    #     action="store_true",
-    #     help="Use this flag to indicate whether they are color or grayscale images: False if grayscale images.",
-    # )
     parser.add_argument(
         "--lr-scheduler",
         type=str,

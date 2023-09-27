@@ -9,7 +9,7 @@ from typing import List, Optional, Union
 
 import torch
 
-from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
+from .constants import OPENAI_COLOR_DATASET_MEAN, OPENAI_COLOR_DATASET_STD, GRAYSCALE_DATASET_MEAN, GRAYSCALE_DATASET_STD
 from .model import build_model_from_openai_state_dict, convert_weights_to_lp, get_cast_dtype
 from .pretrained import get_pretrained_url, list_pretrained_models_by_tag, download_pretrained_from_url
 
@@ -85,6 +85,7 @@ def load_openai_model(
             convert_weights_to_lp(model, dtype=torch.bfloat16)
 
     # add mean / std attributes for consistency with OpenCLIP models
-    model.visual.image_mean = OPENAI_DATASET_MEAN
-    model.visual.image_std = OPENAI_DATASET_STD
+
+    model.visual.image_mean = OPENAI_COLOR_DATASET_MEAN
+    model.visual.image_std = OPENAI_COLOR_DATASET_STD
     return model

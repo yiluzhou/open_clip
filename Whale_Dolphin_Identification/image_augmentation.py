@@ -220,12 +220,12 @@ def customized_augmentation(image_size, color_image=False, training_purpose=True
         customize_RandomResizedCrop = Compose([
         RandomResizedCrop(
             image_size,
-            scale=(0.9, 1.1),
+            scale=(0.95, 1.05),
             interpolation=InterpolationMode.BICUBIC,
         ),
         ])
         customize_RandomCrop = Compose([
-            RandomCrop(size=image_size, padding=int(image_size*0.1)),
+            RandomCrop(size=image_size, padding=int(image_size*0.05)),
             ])
         max_vertical_translate = 0.1
     
@@ -239,7 +239,7 @@ def customized_augmentation(image_size, color_image=False, training_purpose=True
     
     # torchvision transforms
     pre_rotation = Compose([
-        RandomRotation(degrees=15),
+        RandomRotation(degrees=10),
     ])
 
     pre_resize = Compose([
@@ -248,7 +248,7 @@ def customized_augmentation(image_size, color_image=False, training_purpose=True
 
     pre_transforms = Compose([
         RandomHorizontalFlip(p=0.5),
-        ColorJitter(brightness=0.15, contrast=0.15),
+        ColorJitter(brightness=0.1, contrast=0.1),
         RandomAffine(degrees=0, translate=(0.1, max_vertical_translate)),
         customize_RandomCrop,
         # GaussianBlur(kernel_size=(5, 5), sigma=(0.1, 2.0)),
@@ -260,7 +260,7 @@ def customized_augmentation(image_size, color_image=False, training_purpose=True
         ToTensor(),
         *([mean_std(color_image)] if training_purpose else []),                     # normalizing using mean + standard deviation
         # Lambda(percentile_scaling),    # normalizing using percentile scaling
-        RandomErasing(p=0.15, scale=(0.02, 0.1), ratio=(0.3, 3.3), value=0, inplace=False),  # Cutout or Random Erasing
+        RandomErasing(p=0.05, scale=(0.01, 0.03), ratio=(0.3, 3.3), value=0, inplace=False),  # Cutout or Random Erasing
     ])
 
     train_transform = Compose([

@@ -1,5 +1,5 @@
 from .coca_model import CoCa
-from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
+from .constants import OPENAI_COLOR_DATASET_MEAN, OPENAI_COLOR_DATASET_STD, GRAYSCALE_DATASET_MEAN, GRAYSCALE_DATASET_STD
 from .factory import create_model, create_model_and_transforms, create_model_from_pretrained, get_tokenizer, create_loss
 from .factory import list_models, add_model_config, get_model_config, load_checkpoint
 from .loss import ClipLoss, DistillClipLoss, CoCaLoss

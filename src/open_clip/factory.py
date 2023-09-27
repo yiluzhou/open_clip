@@ -9,7 +9,7 @@ from typing import Any, Dict, Optional, Tuple, Union
 
 import torch
 
-from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
+from .constants import OPENAI_COLOR_DATASET_MEAN, OPENAI_COLOR_DATASET_STD, GRAYSCALE_DATASET_MEAN, GRAYSCALE_DATASET_STD
 from .model import CLIP, CustomTextCLIP, convert_weights_to_lp, convert_to_custom_text_state_dict,\
     resize_pos_embed, get_cast_dtype
 from .coca_model import CoCa
@@ -120,6 +120,7 @@ def create_model(
         cache_dir: Optional[str] = None,
         output_dict: Optional[bool] = None,
         require_pretrained: bool = False,
+        color_image: bool = False,
 ):
     has_hf_hub_prefix = model_name.startswith(HF_HUB_PREFIX)
     if has_hf_hub_prefix:
@@ -243,6 +244,13 @@ def create_model(
             raise RuntimeError(
                 f'Pretrained weights were required for (model: {model_name}, pretrained: {pretrained}) but not loaded.')
 
+        if color_image:
+            OPENAI_DATASET_MEAN = OPENAI_COLOR_DATASET_MEAN
+            OPENAI_DATASET_STD = OPENAI_COLOR_DATASET_STD
+        else:
+            OPENAI_DATASET_MEAN = GRAYSCALE_DATASET_MEAN
+            OPENAI_DATASET_STD = GRAYSCALE_DATASET_STD
+
         # set image / mean metadata from pretrained_cfg if available, or use default
         model.visual.image_mean = pretrained_cfg.get('mean', None) or OPENAI_DATASET_MEAN
         model.visual.image_std = pretrained_cfg.get('std', None) or OPENAI_DATASET_STD
@@ -304,6 +312,7 @@ def create_model_and_transforms(
         aug_cfg: Optional[Union[Dict[str, Any], AugmentationCfg]] = None,
         cache_dir: Optional[str] = None,
         output_dict: Optional[bool] = None,
+        color_image: bool = False,
 ):
     model = create_model(
         model_name,
@@ -319,6 +328,7 @@ def create_model_and_transforms(
         pretrained_hf=pretrained_hf,
         cache_dir=cache_dir,
         output_dict=output_dict,
+        color_image=color_image,
     )
 
     image_mean = image_mean or getattr(model.visual, 'image_mean', None)
@@ -329,12 +339,14 @@ def create_model_and_transforms(
         mean=image_mean,
         std=image_std,
         aug_cfg=aug_cfg,
+        color_image=color_image,
     )
     preprocess_val = image_transform(
         model.visual.image_size,
         is_train=False,
         mean=image_mean,
         std=image_std,
+        color_image=color_image,
     )
 
     return model, preprocess_train, preprocess_val
