@@ -1,12 +1,11 @@
 nohup python -m training.main_test \
-    --train-data "./Whale_Dolphin_Identification/train.csv" \
-    --val-data "./Whale_Dolphin_Identification/val.csv" \
+    --train-data "./Whale_Dolphin_Identification/train_species.csv" \
     --csv-img-key filepath \
     --csv-caption-key caption \
     --warmup 1000 \
     --logs "/mnt/g/Logtemp/open_clip/Whale_Dolphin_Identification" \
     --batch-size 32 \
-    --lr 1e-6 \
+    --lr 2e-5 \
     --wd 0.1 \
     --epochs 100 \
     --workers 4 \
@@ -22,6 +21,7 @@ nohup python -m training.main_test \
     --color-image \
     > "/mnt/g/Logtemp/open_clip/Whale_Dolphin_Identification/coca_ViT-L_14_1.txt" 2>&1 &
 
+    --val-data "./Whale_Dolphin_Identification/val.csv" \
 
 
 
